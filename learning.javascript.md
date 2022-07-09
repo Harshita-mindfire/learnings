@@ -2,7 +2,7 @@
 id: 8k7fj3knfjs2vz42yxldbzk
 title: JavaScript
 desc: ''
-updated: 1648190780500
+updated: 1657372191078
 created: 1648190780500
 ---
 
@@ -18,5 +18,11 @@ created: 1648190780500
 - browser
 - v8 engine
 
-## TODO
-- debounce #learn
+## Debounce
+
+- limiting the rate of execution of a particular function
+
+## this
+
+Free function invocations in javascript have `this` bound to the global scope.
+
