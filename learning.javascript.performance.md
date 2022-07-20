@@ -2,9 +2,14 @@
 id: y1ng2qxm7ukl5sce22whs3d
 title: Performance
 desc: ''
-updated: 1657372166115
+updated: 1658248722733
 created: 1657371770600
 ---
+
+## Memoization
+- Memoization is a way to cache a return value of a function based on its parameters.
+- This makes the func that takes a long time to run, much faster after one execution. 
+- If the parameter changes, it will still have to reevaluate the function. 
 
 # Rate Limiting
 
