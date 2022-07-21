@@ -6,7 +6,7 @@ updated: 1658328749631
 created: 1648190780500
 ---
 
-JS is a synchronus, single threaded language.
+JS is a synchronous, single threaded language.
 Single treaded means runs one command at a time and in a specific order.
 JS is loosely typed language. This means any variable is not strictly bind to a data type.
 
@@ -227,3 +227,58 @@ if(curr.age<30) acc.push(curr.firstname);
 return acc;
 },[])
 ```
+
+
+## Promise
+- a JS Object which may produce a value in future either a resolved value or a reason it is not reselved
+- can be in one of the three states
+	- pending
+	- fullfilled or
+	- rejected
+```js
+const promise = new Promise((resolve,reject) => {
+	setTimeout(() => {
+		resolve("done")
+	}, 3000)
+})
+
+async function x(val) {
+return new Promise((resolve,reject) => {
+	setTimeout(() => {if(val%2===0) {
+		resolve("even")
+	} else {
+		reject("odd")
+	}
+	}, 1000)
+})
+}
+```
+
+### Promise.all
+- The Promise.all() method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises. 
+- fail-fast behavior
+
+## Callback hell
+- Callback hell is a antipattern when there are nested callbacks leading to unlegibale code.
+Can be fixed by:
+- async awaits
+- writing promises
+
+
+
+## Ariety
+
+sum(1)(2)....(5) = //
+
+
+```js
+function add(...args) {
+  let a = args.reduce((a, b) => a + b, 0)
+  return function(...args){
+    let b = args.reduce((a, b) => a + b, 0)
+    if(b){
+      return add(a+b)
+    }
+    return a
+  }
+}```
