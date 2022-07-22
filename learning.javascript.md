@@ -228,6 +228,19 @@ return acc;
 },[])
 ```
 
+### polyfill for map
+
+```js
+Array.prototype.myArray = function(cb) {
+    const obj = this;
+    const returnArr=[];
+    for(var i=0; i<obj.length;i++){
+        returnArr.push(cb(obj[i],i,obj))
+    }
+    return returnArr;
+}
+```
+
 
 ## Promise
 - a JS Object which may produce a value in future either a resolved value or a reason it is not reselved
