@@ -295,3 +295,6 @@ function add(...args) {
     return a
   }
 }```
+
+
+## Prototypical Ineritence

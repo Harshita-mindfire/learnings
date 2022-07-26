@@ -1,0 +1,6 @@
+
+## Web vitals
+standard google guidelines to provide good UX
+- LCP(Largest ContentFul paint) : measures loading perf, within 2.5sec of initial load
+- First Input Delay(FID): measures interactivity, 100ms
+- Cumulative layout shift: measures visual stability.
