@@ -2,7 +2,7 @@
 id: qni9fshnce32rhoxta4na21
 title: Web
 desc: ''
-updated: 1658829234254
+updated: 1658833116576
 created: 1658826095958
 ---
 
@@ -17,7 +17,7 @@ graph TD;
     Javascript --> DOM
     Javascript --> CSSDOM
 ```
-## DOM
+### DOM
 - browser captures all contents of the page in DOM
 - full parsed representation of HTML markup.
 - browser constructs DOM incrementaly(building the dom as soon as we have the HTMl and not have to wait for entire HTMl page to render)
@@ -26,7 +26,7 @@ graph TD;
 graph TD;
 Characters --> Tokens --> Nodes --> DOM
 ```
-## CSSOM
+### CSSOM
 - browser captures all the styles of the page in a CSS OM
 converts token to Nodes
 - css rules cascade down(children of body note inherit its parent's css)
@@ -34,11 +34,17 @@ converts token to Nodes
 - it is render blocking(browser blocks page rendering until the entire cssom is created)
 - more specific rules are expensive.
 
-## Render Tree
+### Render Tree
 - merge the two DOM and CSSOM in render tree
 - only captures visible content.
-## Layout
+### Layout
 determines the scrren size and position of each node in the screen.
 
-## Paint
+### Paint
 Paints pixels on the scrren
+
+
+## Optimizing CRP
+-  minimizing the number of critical resources by deferring non-critical ones' download, marking them as async,
+- optimizing the number of requests required along with the file size of each request,
+- optimizing the order in which critical resources are loaded by prioritizing the downloading of critical assets, thereby shortening the critical path length.
