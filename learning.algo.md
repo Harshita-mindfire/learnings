@@ -25,6 +25,80 @@ AVL tree is a self-balancing Binary Search Tree (BST) where the difference betwe
 
 ## Graph Algos
 https://www.youtube.com/watch?v=cWNEl4HE2OE
+
+### Creating adjacency list
+```js
+const airports = "Del Mum Kol Bng Deh Pnt".split(" ");
+//console.log(airports);
+const routes = [
+    ["Del", "Deh"],
+    ["Del", "Mum"],
+    ["Del","Bng" ],
+    ["Mum", "Kol"],
+    ["Deh", "Pnt"]
+    ];
+
+const adjacencyList = new Map();// add key value
+function addNode(airport) {
+    adjacencyList.set(airport,[])
+}
+airports.forEach(airport => addNode(airport));
+//console.log(adjacencyList);
+
+function addEdge(src, dest) {
+    adjacencyList.get(src).push(dest);
+    adjacencyList.get(dest).push(src);
+}
+routes.forEach(route => addEdge(...route))
+// console.log(adjacencyList);
+```
 ### DFS
 
+```js
+function Dfs(root, visited = new Set()) {
+    visited.add(root);
+    const dests = adjacencyList.get(root);
+    
+    dests.forEach(dest => {
+        console.log(dest)
+        if(dest === "Deh") {
+            console.log("reached");
+            return;
+        }
+        if(!visited.has(dest)) {
+            Dfs(dest, visited)
+        }
+    })
+}
+Dfs("Mum")
+```
+
 ### BFS
+
+```js
+// BFS with entry point Mum (also log if reached Bng)
+
+function BFS(root) {
+    const visited = new Set();
+    const queue = [root]
+    visited.add(root)
+
+    while(queue.length > 0) {
+        const airport = queue.shift(1);
+        const dests = adjacencyList.get(airport);
+        dests.forEach(dest => {
+            console.log(dest)
+            if(dest === "Bng") console.log("Reached Bng")
+        if(!visited.has(dest)){
+            visited.add(dest)
+            queue.push(dest) 
+
+        }
+        }
+            )
+    }
+    console.log(visited)
+
+}
+BFS("Mum")
+```
