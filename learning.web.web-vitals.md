@@ -1,3 +1,10 @@
+---
+id: z34vf2zj27tr4j9219ze4c4
+title: Web Vitals
+desc: ''
+updated: 1658826120949
+created: 1658826120950
+---
 
 ## Web vitals
 standard google guidelines to provide good UX
