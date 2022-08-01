@@ -2,14 +2,13 @@
 id: vki8h0dqc2fmn6hpdvgjjue
 title: Meeting Notes Template
 desc: ''
-updated: 1659338921936
+updated: 1659346088718
 created: 1659338347656
 ---
 
 ## Attendees
 <!-- Meeting attendees. If you prefix users with an '@', you can then optionally click Ctrl+Enter to create a note for that user. -->
 
-- @sidhant
 - @Harshita-mindfire
 - @lakin
 
