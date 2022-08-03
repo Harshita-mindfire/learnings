@@ -2,7 +2,7 @@
 id: 5shqmwqivatr06oasv480ni
 title: Flex Box
 desc: ''
-updated: 1648902134597
+updated: 1659518243040
 created: 1648902134597
 ---
 
@@ -96,13 +96,3 @@ Animation CSS #learn
   }
 }
 ```
-
-## position
-
-- static: (default) not positioned in any special way; it is always positioned according to the normal flow of the page.
-- relative: positioned relative to its normal position.
-- fixed: An element with `position: fixed;` is positioned relative to the viewport,
-- absolute: An element with `position: absolute` is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
-
-However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
-- sticky: An element with `position: sticky;` is positioned based on the user's scroll position.
